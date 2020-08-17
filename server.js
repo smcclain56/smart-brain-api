@@ -35,8 +35,8 @@ app.post('/imageurl', (req, res) => { image.handleApiCall(req, res) })
 //could also do it this way:
 //app.post('/register', (req, res) => { register.handleRegister(req, res, db, bcrypt) });
 
-app.listen(8080, () => {
-    console.log('app is running on port 8080');
+app.listen(process.env.PORT || 8080, () => {
+    console.log(`app is running on port ${process.env.PORT}`);
 });
 
 
