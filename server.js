@@ -8,14 +8,11 @@ const signin = require('./controllers/signin');
 const profile = require('./controllers/profile');
 const image = require('./controllers/image');
 
-const DATABASE_PASSWORD = process.env.DATABASE_PASSWORD;
 const db = knex({
     client: 'pg',
     connection: {
-        host: 'postgresql-concentric-86350',
-        user: 'postgres',
-        password: DATABASE_PASSWORD,
-        database: 'smart-brain'
+        host: process.env.DATABASE_URL,
+        ssl: true
     }
 });
 
