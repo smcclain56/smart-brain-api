@@ -12,7 +12,7 @@ const DATABASE_PASSWORD = process.env.DATABASE_PASSWORD;
 const db = knex({
     client: 'pg',
     connection: {
-        host: '127.0.0.1',
+        host: 'postgresql-concentric-86350',
         user: 'postgres',
         password: DATABASE_PASSWORD,
         database: 'smart-brain'
